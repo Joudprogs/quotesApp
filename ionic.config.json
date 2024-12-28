@@ -1,0 +1,7 @@
+{
+  "name": "quotesApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
