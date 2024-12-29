@@ -3,13 +3,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./pages/home/home.page').then(m => m.HomePage) // Use loadComponent for standalone component
+  },
+  {
+    path: 'favorate',
+    loadChildren: () => import('./pages/favorate/favorate.module').then(m => m.FavoratePageModule)
   },
 ];
 
